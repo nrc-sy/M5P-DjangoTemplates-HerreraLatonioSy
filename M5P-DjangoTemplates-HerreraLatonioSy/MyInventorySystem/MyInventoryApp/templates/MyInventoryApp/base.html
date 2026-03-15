@@ -1,0 +1,43 @@
+<!--
+, ; Zale Sebastian Latonio, 242494 ; Nathan Riley Sy, 244311
+March , 2026
+
+I hereby attest to the truth of the following facts:
+
+I have not discussed the HTML language code in my program with anyone
+other than my instructor or the teaching assistants assigned to this course.
+
+I have not used HTML language code obtained from another student, or
+any other unauthorized source, either modified or unmodified.
+
+If any HTML language code or documentation used in my program was
+obtained from another source, such as a textbook or course notes, that has been clearly noted with proper citation in the
+comments of my program.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Inventory System</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>My Inventory System</h1>
+        <nav>
+            <a href="{% url 'view_supplier' %}">Suppliers</a> |
+            <a href="{% url 'view_bottles' %}">Water Bottles</a> |
+            <a href="{% url 'add_bottle' %}">Add Bottle</a>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>© 2026</p>
+    </footer>
+</body>
+</html>
