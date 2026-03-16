@@ -1,4 +1,4 @@
-# , ; Zale Sebastian Latonio, ; Nathan Riley Sy, 244311
+# , ; Zale Sebastian Latonio, 242494 ; Nathan Riley Sy, 244311
 # March , 2026 
 
 '''
@@ -37,7 +37,7 @@ from MyInventoryApp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('view_supplier/', views.view_supplier, name='view_supplier'),
-    path('view_bottles/', views.view_bottles, name='view_bottles'),
-    path('add_bottle/', views.add_bottle, name='add_bottle'),
+    path('view_supplier', views.view_supplier, name='view_supplier'),
+    path('view_bottles', views.view_bottles, name='view_bottles'),
+    path('add_bottle', views.add_bottle, name='add_bottle'),
 ]

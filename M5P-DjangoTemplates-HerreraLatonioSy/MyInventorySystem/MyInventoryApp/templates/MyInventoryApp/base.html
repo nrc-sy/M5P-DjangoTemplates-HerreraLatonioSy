@@ -15,14 +15,18 @@ obtained from another source, such as a textbook or course notes, that has been 
 comments of my program.
 -->
 
+{% load static %}
+
 <!DOCTYPE html>
 <html>
 <head>
+    {% block head %}
     <title>My Inventory System</title>
-    {% load static %}
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% endblock %}
 </head>
 <body>
+    {% block header %}
     <header>
         <h1>My Inventory System</h1>
         <nav>
@@ -31,10 +35,10 @@ comments of my program.
             <a href="{% url 'add_bottle' %}">Add Bottle</a>
         </nav>
     </header>
+    {% endblock %}
 
-    <main>
-        {% block content %}{% endblock %}
-    </main>
+    {% block content %}
+    {% endblock %}
 
     <footer>
         <p>© 2026</p>

@@ -15,5 +15,16 @@ obtained from another source, such as a textbook or course notes, that has been 
 comments of my program.
 -->
 
-{% extend 'MyInventoryApp/base.html' %}
+{% extends 'MyInventoryApp/base.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+    <head>
+    </head>
+    <body>
+        {% block content %}
+        <h1>Test</h1>
+        {% endblock %}
+    </body>
+</html>
 
